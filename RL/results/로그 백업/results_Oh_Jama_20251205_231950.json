@@ -1,0 +1,13 @@
+{
+  "puzzle": "Oh_Jama",
+  "puzzle_id": 0,
+  "timestamp": "20251205_231950",
+  "num_episodes": 10000,
+  "results": [
+    {
+      "algorithm": "reinforce_baseline",
+      "win_rate": 1.0,
+      "avg_reward": 498.755
+    }
+  ]
+}

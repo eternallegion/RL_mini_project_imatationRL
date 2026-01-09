@@ -1,0 +1,28 @@
+{
+  "puzzle": "Oh_Jama",
+  "puzzle_id": 0,
+  "timestamp": "20251206_162754",
+  "num_episodes": 10000,
+  "results": [
+    {
+      "algorithm": "dqn",
+      "win_rate": 0.0,
+      "avg_reward": -214.5
+    },
+    {
+      "algorithm": "double_dqn",
+      "win_rate": 0.0,
+      "avg_reward": -214.5
+    },
+    {
+      "algorithm": "reinforce_baseline",
+      "win_rate": 1.0,
+      "avg_reward": 498.755
+    },
+    {
+      "algorithm": "a2c",
+      "win_rate": 0.73,
+      "avg_reward": 30.43772727272728
+    }
+  ]
+}

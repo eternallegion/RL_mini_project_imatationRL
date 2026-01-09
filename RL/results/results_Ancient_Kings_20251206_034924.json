@@ -1,0 +1,28 @@
+{
+  "puzzle": "Ancient_Kings",
+  "puzzle_id": 1,
+  "timestamp": "20251206_034924",
+  "num_episodes": 10000,
+  "results": [
+    {
+      "algorithm": "dqn",
+      "win_rate": 0.0,
+      "avg_reward": -240.0
+    },
+    {
+      "algorithm": "double_dqn",
+      "win_rate": 0.0,
+      "avg_reward": -240.0
+    },
+    {
+      "algorithm": "reinforce_baseline",
+      "win_rate": 0.39,
+      "avg_reward": 1318.7164285714289
+    },
+    {
+      "algorithm": "a2c",
+      "win_rate": 1.0,
+      "avg_reward": 681.5328571428582
+    }
+  ]
+}

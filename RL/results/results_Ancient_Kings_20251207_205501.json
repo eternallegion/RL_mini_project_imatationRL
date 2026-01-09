@@ -1,0 +1,13 @@
+{
+  "puzzle": "Ancient_Kings",
+  "puzzle_id": 1,
+  "timestamp": "20251207_205501",
+  "num_episodes": 2000,
+  "results": [
+    {
+      "algorithm": "a2c",
+      "win_rate": 0.99,
+      "avg_reward": 692.920238095239
+    }
+  ]
+}
