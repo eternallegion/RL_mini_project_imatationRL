@@ -1,0 +1,14 @@
+{
+  "name": "seq_block_buff_kill",
+  "opp_lp_init": 4000,
+  "hand": [
+    {"op": "BLOCK", "kind": "BLOCK"},
+    {"op": "BUFF", "kind": "BUFF"},
+    {"op": "ATK", "kind": "ATK"}
+  ],
+  "damage_rules": { "atk_base": 2000, "buff_multiplier": 2.0 },
+  "constraints": {
+    "required_order": ["BLOCK", "BUFF", "ATK"],
+    "min_actions_before_stop": 3
+  }
+}

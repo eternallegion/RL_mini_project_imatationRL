@@ -1,0 +1,22 @@
+{
+  "name": "zero_then_atk",
+  "opp_lp": 2000,               
+  "hand": [
+    { "kind": "ZERO" },
+    { "kind": "ATK" },
+    { "kind": "PAD" },
+    { "kind": "PAD" },
+    { "kind": "PAD" }
+  ],
+  "max_steps": 3,
+  "max_hand": 5,
+  "damage_rules": {
+    "atk_base": 2000
+  },
+  "constraints": {
+    "must_break_before_first_atk": true,
+    "limit_kind_counts": {
+      "ATK": 1
+    }
+  }
+}

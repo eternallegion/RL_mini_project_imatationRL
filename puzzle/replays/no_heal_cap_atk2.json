@@ -1,0 +1,10 @@
+{
+  "puzzle": "no_heal_cap_atk2",
+  "seed": 2025,
+  "reward": 2.3821176470588235,
+  "actions": [
+    2,
+    1,
+    "STOP"
+  ]
+}

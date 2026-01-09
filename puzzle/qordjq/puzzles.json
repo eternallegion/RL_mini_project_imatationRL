@@ -1,0 +1,51 @@
+[
+  {
+    "name": "seq_block_buff_kill",
+    "opp_lp": 1500,
+    "opp_block": true,
+    "hand": [
+      { "name": "Breaker", "kind": "BLOCK_BREAK" },
+      { "name": "PowerUp", "kind": "BUFF", "value": 400 },
+      { "name": "Strike", "kind": "ATK", "value": 1500 }
+    ],
+    "constraints": {
+      "must_break_before_first_atk": true,
+      "require_sequence": ["BLOCK_BREAK", "BUFF", "ATK"],
+      "must_end_with": "ATK"
+    }
+  },
+
+  {
+    "name": "no_heal_cap_atk2",
+    "opp_lp": 1700,
+    "hand": [
+      { "name": "Buff150", "kind": "BUFF", "value": 150 },
+      { "name": "Hit900", "kind": "ATK", "value": 900 },
+      { "name": "Hit700", "kind": "ATK", "value": 700 },
+      { "name": "Heal200", "kind": "HEAL", "value": 200 }
+    ],
+    "constraints": {
+      "forbid_kinds": ["HEAL"],
+      "limit_kind_counts": { "ATK": 2 },
+      "must_end_with": "ATK"
+    }
+  },
+
+  {
+    "name": "must_break_before_first_atk",
+    "opp_lp": 1600,
+    "opp_block": true,
+    "hand": [
+      { "name": "PowerUp", "kind": "BUFF", "value": 200 },
+      { "name": "Breaker", "kind": "BLOCK_BREAK" },
+      { "name": "Hit1000", "kind": "ATK", "value": 1000 },
+      { "name": "Hit600", "kind": "ATK", "value": 600 }
+    ],
+    "constraints": {
+      "must_break_before_first_atk": true,
+      "must_end_with": "ATK",
+      "max_cards": 3,
+      "require_sequence": ["BLOCK_BREAK", "ATK", "ATK"]
+    }
+  }
+]

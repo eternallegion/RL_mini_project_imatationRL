@@ -1,0 +1,13 @@
+{
+  "name": "damage_chain_min",
+  "my_lp_init": 4000,
+  "opp_lp_init": 3000,
+  "hand": [
+    { "kind": "ATK", "op": "ATK", "value": 1500 },
+    { "kind": "ATK", "op": "ATK", "value": 1500 }
+  ],
+  "constraints": {
+    "required_order": ["ATK", "ATK"]
+  },
+  "max_steps": 6
+}

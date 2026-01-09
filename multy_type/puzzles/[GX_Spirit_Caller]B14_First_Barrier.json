@@ -1,0 +1,31 @@
+{
+  "name": "[GX_Spirit_Caller]B14_First_Barrier",
+  "opp_lp_init": 4000,
+
+  "max_steps": 6,
+  "max_hand": 4,
+
+  "hand": [
+    { "slot": 0, "kind": "ZERO" },
+    { "slot": 1, "kind": "PILL" },
+    { "slot": 2, "kind": "TRIO" },
+    { "slot": 3, "kind": "ATK" }
+  ],
+
+  "damage_rules": {
+    "atk_base": 2000,
+    "pill_bonus": 0,
+    "buff_multiplier": 1.0,
+    "trio_multiplier": 2.0
+  },
+
+  "constraints": {
+    "must_break_before_first_atk": false,
+    "limit_kind_counts": {
+      "ATK": 1
+    },
+    "forbid_kinds": []
+  },
+
+  "win_seq_exact": ["ZERO", "PILL", "TRIO", "ATK"]
+}

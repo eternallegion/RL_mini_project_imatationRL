@@ -1,0 +1,13 @@
+{
+  "name": "GX_Spirit_Caller_B03_Oh_Jama",
+  "actions": ["OJAMA_TRIO", "ZERO_GRAVITY", "BIG_EVOLUTION_PILL", "ATTACK_ALL", "STOP"],
+  "rules": {
+    "must_order": ["OJAMA_TRIO", "ZERO_GRAVITY", "BIG_EVOLUTION_PILL", "ATTACK_ALL"],
+    "stop_after": true,
+    "opp_lp": 4000,
+    "attack_damage": 4000
+  },
+  "flags_init": {
+    "has_stego": true
+  }
+}

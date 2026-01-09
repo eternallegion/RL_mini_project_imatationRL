@@ -1,0 +1,107 @@
+2025-11-10 00:23:54,806 [TRACE] TEACHER TRACE START
+2025-11-10 00:23:54,806 [TRACE]   t=01  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,806 [TRACE]   t=02  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': False}
+2025-11-10 00:23:54,806 [TRACE]   t=03  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,806 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,806 [TRACE] TEACHER TRACE END
+
+2025-11-10 00:23:54,852 [TRACE] TRAIN EP200 START
+2025-11-10 00:23:54,852 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (0, 2, 1, 3) (['TRIO', 'PILL', 'ZERO', 'ATK'])
+2025-11-10 00:23:54,852 [TRACE]   t=01  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,852 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': True}
+2025-11-10 00:23:54,852 [TRACE]   t=03  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,852 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,852 [TRACE] TRAIN EP200 END
+
+2025-11-10 00:23:54,879 [TRACE] TRAIN EP400 START
+2025-11-10 00:23:54,879 [TRACE] Turn: 4  OppLP: 4000
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (3, 0, 1, 2) (['ATK', 'TRIO', 'ZERO', 'PILL'])
+2025-11-10 00:23:54,879 [TRACE]   t=01  act=ATK(idx=3)      LP:4000→4000  flags={'trio': False, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,879 [TRACE]   t=02  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,879 [TRACE]   t=03  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': False}
+2025-11-10 00:23:54,879 [TRACE]   t=04  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,879 [TRACE] TRAIN EP400 END
+
+2025-11-10 00:23:54,907 [TRACE] TRAIN EP600 START
+2025-11-10 00:23:54,907 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (0, 1, 2, 3) (['TRIO', 'ZERO', 'PILL', 'ATK'])
+2025-11-10 00:23:54,907 [TRACE]   t=01  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,907 [TRACE]   t=02  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': False}
+2025-11-10 00:23:54,907 [TRACE]   t=03  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,907 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,907 [TRACE] TRAIN EP600 END
+
+2025-11-10 00:23:54,934 [TRACE] TRAIN EP800 START
+2025-11-10 00:23:54,934 [TRACE] Turn: 4  OppLP: 4000
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (3, 0, 2, 1) (['ATK', 'TRIO', 'PILL', 'ZERO'])
+2025-11-10 00:23:54,934 [TRACE]   t=01  act=ATK(idx=3)      LP:4000→4000  flags={'trio': False, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,935 [TRACE]   t=02  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,935 [TRACE]   t=03  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': True}
+2025-11-10 00:23:54,935 [TRACE]   t=04  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,935 [TRACE] TRAIN EP800 END
+
+2025-11-10 00:23:54,961 [TRACE] TRAIN EP1000 START
+2025-11-10 00:23:54,961 [TRACE] Turn: 4  OppLP: 4000
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (3, 2, 0, 1) (['ATK', 'PILL', 'TRIO', 'ZERO'])
+2025-11-10 00:23:54,961 [TRACE]   t=01  act=ATK(idx=3)      LP:4000→4000  flags={'trio': False, 'zero': False, 'pill': False}
+2025-11-10 00:23:54,961 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': False, 'zero': False, 'pill': True}
+2025-11-10 00:23:54,961 [TRACE]   t=03  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': True}
+2025-11-10 00:23:54,961 [TRACE]   t=04  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,961 [TRACE] TRAIN EP1000 END
+
+2025-11-10 00:23:54,987 [TRACE] TRAIN EP1200 START
+2025-11-10 00:23:54,987 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (1, 2, 0, 3) (['ZERO', 'PILL', 'TRIO', 'ATK'])
+2025-11-10 00:23:54,987 [TRACE]   t=01  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': False, 'zero': True, 'pill': False}
+2025-11-10 00:23:54,987 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': False, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,987 [TRACE]   t=03  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,987 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:54,987 [TRACE] TRAIN EP1200 END
+
+2025-11-10 00:23:55,014 [TRACE] TRAIN EP1400 START
+2025-11-10 00:23:55,014 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (0, 2, 1, 3) (['TRIO', 'PILL', 'ZERO', 'ATK'])
+2025-11-10 00:23:55,014 [TRACE]   t=01  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:55,014 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': True}
+2025-11-10 00:23:55,014 [TRACE]   t=03  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,014 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,014 [TRACE] TRAIN EP1400 END
+
+2025-11-10 00:23:55,042 [TRACE] TRAIN EP1600 START
+2025-11-10 00:23:55,042 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (0, 2, 1, 3) (['TRIO', 'PILL', 'ZERO', 'ATK'])
+2025-11-10 00:23:55,042 [TRACE]   t=01  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:55,042 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': True}
+2025-11-10 00:23:55,042 [TRACE]   t=03  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,042 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,042 [TRACE] TRAIN EP1600 END
+
+2025-11-10 00:23:55,069 [TRACE] TRAIN EP1800 START
+2025-11-10 00:23:55,069 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (0, 2, 1, 3) (['TRIO', 'PILL', 'ZERO', 'ATK'])
+2025-11-10 00:23:55,069 [TRACE]   t=01  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': False}
+2025-11-10 00:23:55,069 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': True, 'zero': False, 'pill': True}
+2025-11-10 00:23:55,069 [TRACE]   t=03  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,069 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,069 [TRACE] TRAIN EP1800 END
+
+2025-11-10 00:23:55,097 [TRACE] TRAIN EP2000 START
+2025-11-10 00:23:55,097 [TRACE] Turn: 4  OppLP: 0
+Flags: TRIO=True, ZERO=True, PILL=True
+Used: (1, 2, 0, 3) (['ZERO', 'PILL', 'TRIO', 'ATK'])
+2025-11-10 00:23:55,097 [TRACE]   t=01  act=ZERO(idx=1)     LP:4000→4000  flags={'trio': False, 'zero': True, 'pill': False}
+2025-11-10 00:23:55,097 [TRACE]   t=02  act=PILL(idx=2)     LP:4000→4000  flags={'trio': False, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,097 [TRACE]   t=03  act=TRIO(idx=0)     LP:4000→4000  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,097 [TRACE]   t=04  act=ATK(idx=3)      LP:4000→0  flags={'trio': True, 'zero': True, 'pill': True}
+2025-11-10 00:23:55,097 [TRACE] TRAIN EP2000 END
+

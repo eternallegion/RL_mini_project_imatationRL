@@ -1,0 +1,11 @@
+{
+  "puzzle": "must_break_before_first_atk",
+  "seed": 2025,
+  "reward": 2.634,
+  "actions": [
+    0,
+    1,
+    3,
+    2
+  ]
+}

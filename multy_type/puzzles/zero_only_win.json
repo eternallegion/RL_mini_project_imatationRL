@@ -1,0 +1,24 @@
+{
+  "name": "zero_only_win",
+  "hand": [
+    { "kind": "ZERO" },
+    { "kind": "ATK" },
+    { "kind": "PAD" },
+    { "kind": "PAD" },
+    { "kind": "PAD" }
+  ],
+  "max_hand": 5,
+  "max_steps": 5,
+  "opp_lp": 3000,
+  "damage_rules": {
+    "atk_base": 2000,
+    "pill_bonus": 0,
+    "buff_multiplier": 2.0,
+    "trio_multiplier": 2.0
+  },
+  "constraints": {
+    "limit_kind_counts": {
+      "ATK": 0
+    }
+  }
+}

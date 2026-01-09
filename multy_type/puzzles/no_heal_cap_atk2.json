@@ -1,0 +1,15 @@
+{
+  "name": "no_heal_cap_atk2",
+  "opp_lp_init": 4000,
+  "hand": [
+    {"op":"ATK","kind":"ATK"},
+    {"op":"ATK","kind":"ATK"}
+  ],
+  "damage_rules": { "atk_base": 2000 },
+  "constraints": {
+    "required_order": ["ATK","ATK"],
+    "limit_kind_counts": {"ATK": 2},
+    "forbid_kinds": ["HEAL","CAP","BLOCK","TRIO","ZERO","PILL","BUFF"],
+    "min_actions_before_stop": 2
+  }
+}

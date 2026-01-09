@@ -1,0 +1,9 @@
+{
+  "puzzle": "seq_block_buff_kill",
+  "seed": 2025,
+  "reward": 1.992,
+  "actions": [
+    0,
+    2
+  ]
+}

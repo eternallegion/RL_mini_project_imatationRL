@@ -1,0 +1,234 @@
+[
+  {
+    "name": "seq_block_buff_kill",
+    "opp_lp": 1500,
+    "opp_block": true,
+    "hand": [
+      { "name": "Breaker", "kind": "BLOCK_BREAK" },
+      { "name": "PowerUp", "kind": "BUFF", "value": 400 },
+      { "name": "Strike", "kind": "ATK", "value": 1500 }
+    ],
+    "constraints": {
+      "must_break_before_first_atk": true,
+      "require_sequence": ["BLOCK_BREAK", "BUFF", "ATK"],
+      "must_end_with": "ATK"
+    }
+  },
+  {
+    "name": "no_heal_cap_atk2",
+    "opp_lp": 1700,
+    "hand": [
+      { "name": "Buff150", "kind": "BUFF", "value": 150 },
+      { "name": "Hit900", "kind": "ATK", "value": 900 },
+      { "name": "Hit700", "kind": "ATK", "value": 700 },
+      { "name": "Heal200", "kind": "HEAL", "value": 200 }
+    ],
+    "constraints": {
+      "forbid_kinds": ["HEAL"],
+      "limit_kind_counts": { "ATK": 2 },
+      "must_end_with": "ATK"
+    }
+  },
+  {
+    "name": "must_break_before_first_atk",
+    "opp_lp": 1600,
+    "opp_block": true,
+    "hand": [
+      { "name": "PowerUp", "kind": "BUFF", "value": 200 },
+      { "name": "Breaker", "kind": "BLOCK_BREAK" },
+      { "name": "Hit1000", "kind": "ATK", "value": 1000 },
+      { "name": "Hit600", "kind": "ATK", "value": 600 }
+    ],
+    "constraints": {
+      "must_break_before_first_atk": true,
+      "must_end_with": "ATK",
+      "max_cards": 3,
+      "require_sequence": ["BLOCK_BREAK", "ATK", "ATK"]
+    }
+  },
+  {
+    "name": "auto_mst_then_kill",
+    "opp_lp": 1800,
+    "opp_block": true,
+    "hand": [
+      { "name": "미니 MST", "kind": "SCRIPT", "text": "상대의 세트된 카드 1장을 파괴한다." },
+      { "name": "일격 1800", "kind": "ATK", "value": 1800 }
+    ],
+    "constraints": {
+      "require_sequence": ["SCRIPT", "ATK"],
+      "must_end_with": "ATK"
+    }
+  },
+  {
+  "name": "double_block_precision",
+  "opp_lp": 2000,
+  "opp_block": true,
+  "hand": [
+    { "name": "Breaker#1", "kind": "BLOCK_BREAK" },
+    { "name": "ReblockNow", "kind": "SCRIPT", "text": "상대는 다시 세트된 카드 1장을 준비한다." },
+    { "name": "Breaker#2", "kind": "BLOCK_BREAK" },
+    { "name": "Hit2000", "kind": "ATK", "value": 2000 }
+  ],
+  "constraints": {
+    "require_sequence": ["BLOCK_BREAK", "SCRIPT", "BLOCK_BREAK", "ATK"],
+    "must_end_with": "ATK",
+    "max_cards": 4
+  }
+  },
+  {
+  "name": "draw_branching_kill",
+  "opp_lp": 1900,
+  "opp_block": true,
+  "hand": [
+    { "name": "DrawOne", "kind": "DRAW" },
+    { "name": "Hit1900", "kind": "ATK", "value": 1900 }
+  ],
+  "scripted_draw": [
+    { "name": "MST-lite", "kind": "SCRIPT", "text": "상대의 세트된 카드 1장을 파괴한다." },
+    { "name": "MiniBuff", "kind": "BUFF", "value": 300 }
+  ],
+  "constraints": {
+    "must_end_with": "ATK",
+    "max_cards": 3
+  }
+},{
+  "name": "chain_resolve_then_kill",
+  "opp_lp": 1800,
+  "hand": [
+    {
+      "name": "Activate +300",
+      "kind": "SCRIPT",
+      "script": {
+        "effect": [
+          { "op": "activate", "speed": 1, "payload": [
+              { "op": "add_buff", "target": { "owner": "self" }, "amount": 300, "until": "end_of_turn" }
+          ]}
+        ]
+      }
+    },
+    { "name": "Resolve", "kind": "SCRIPT", "script": { "effect": [ { "op": "resolve" } ] } },
+    { "name": "Hit1500", "kind": "ATK", "value": 1500 }
+  ],
+  "constraints": {
+    "require_sequence": ["SCRIPT","SCRIPT","ATK"],
+    "must_end_with": "ATK",
+    "max_cards": 3
+  }
+},{
+  "name": "draw2_branch_and_limit",
+  "opp_lp": 2000,
+  "opp_block": true,
+  "hand": [
+    { "name": "DrawOne", "kind": "DRAW" },
+    { "name": "DrawTwo", "kind": "SCRIPT", "script": { "effect": [ { "op": "draw", "amount": 2 } ] } },
+    { "name": "Hit1700", "kind": "ATK", "value": 1700 }
+  ],
+  "scripted_draw": [
+    { "name": "MST", "kind": "SCRIPT", "text": "상대의 세트된 카드 1장을 파괴한다." },
+    { "name": "MiniBuff", "kind": "BUFF", "value": 300 }
+  ],
+  "constraints": {
+    "forbid_kinds": ["HEAL"],
+    "must_end_with": "ATK",
+    "max_cards": 5
+  }
+},{
+  "name": "draw2_branch_and_limit",
+  "opp_lp": 2000,
+  "opp_block": true,
+  "hand": [
+    { "name": "DrawOne", "kind": "DRAW" },
+    { "name": "DrawTwo", "kind": "SCRIPT", "script": { "effect": [ { "op": "draw", "amount": 2 } ] } },
+    { "name": "Hit1700", "kind": "ATK", "value": 1700 }
+  ],
+  "scripted_draw": [
+    { "name": "MST", "kind": "SCRIPT", "text": "상대의 세트된 카드 1장을 파괴한다." },
+    { "name": "MiniBuff", "kind": "BUFF", "value": 300 }
+  ],
+  "constraints": {
+    "forbid_kinds": ["HEAL"],
+    "must_end_with": "ATK",
+    "max_cards": 5
+  }
+},{
+  "name": "chain_negate_then_kill",
+  "opp_lp": 1800,
+  "hand": [
+    {
+      "name": "Activate +300",
+      "kind": "SCRIPT",
+      "script": {
+        "effect": [
+          { "op": "activate", "speed": 1, "payload": [
+            { "op": "add_buff", "target": { "owner": "self" }, "amount": 300, "until": "end_of_turn" }
+          ]}
+        ]
+      }
+    },
+    { "name": "Opp Negate (spd2)", "kind": "SCRIPT", "script": { "effect": [ { "op": "negate", "speed": 2 } ] } },
+    { "name": "You Counter (spd3)", "kind": "SCRIPT", "script": { "effect": [ { "op": "negate", "speed": 3 } ] } },
+    { "name": "Resolve", "kind": "SCRIPT", "script": { "effect": [ { "op": "resolve" } ] } },
+    { "name": "Hit1500", "kind": "ATK", "value": 1500 }
+  ],
+  "constraints": {
+    "require_sequence": ["SCRIPT","SCRIPT","SCRIPT","SCRIPT","ATK"],
+    "must_end_with": "ATK",
+    "max_cards": 5
+  }
+},{
+  "name": "block_then_chain_counter_kill",
+  "opp_lp": 1900,
+  "opp_block": true,
+  "hand": [
+    { "name": "Breaker", "kind": "BLOCK_BREAK" },
+    {
+      "name": "Activate +400",
+      "kind": "SCRIPT",
+      "script": {
+        "effect": [
+          { "op": "activate", "speed": 1, "payload": [
+            { "op": "add_buff", "target": { "owner": "self" }, "amount": 400, "until": "end_of_turn" }
+          ]}
+        ]
+      }
+    },
+    { "name": "Opp Negate (spd2)", "kind": "SCRIPT", "script": { "effect": [ { "op": "negate", "speed": 2 } ] } },
+    { "name": "You Counter (spd3)", "kind": "SCRIPT", "script": { "effect": [ { "op": "negate", "speed": 3 } ] } },
+    { "name": "Resolve", "kind": "SCRIPT", "script": { "effect": [ { "op": "resolve" } ] } },
+    { "name": "Hit1500", "kind": "ATK", "value": 1500 }
+  ],
+  "constraints": {
+    "require_sequence": ["BLOCK_BREAK","SCRIPT","SCRIPT","SCRIPT","SCRIPT","ATK"],
+    "must_end_with": "ATK",
+    "max_cards": 6
+  }
+}, {
+  "name": "[GX_Spirit_Caller]B03_Oh_Jama",
+  "opp_lp": 4000,
+  "my_lp": 4000,
+  "my_buff": 0,
+  "opp_block": false,
+  "constraints": {
+    "must_end_with": "ATK",
+    "limit_kind_counts": { "ATK": 1 },
+    "forbid_kinds": []
+  },
+  "hand": [
+    { "name": "Ojama Trio",        "kind": "SCRIPT", "value": 1, "script": "OJAMA_TRIO" },
+    { "name": "Zero Gravity",       "kind": "SCRIPT", "value": 1, "script": "ZERO_GRAVITY" },
+    { "name": "Big Evolution Pill", "kind": "SCRIPT", "value": 1, "script": "BIG_EVOLUTION_PILL" },
+    { "name": "Finisher ATK",       "kind": "ATK",    "value": 3000 }
+  ],
+  "stack": [],
+  "notes": "TRIO->GRAVITY->PILL->ATK 로 원턴킬"
+}
+
+
+
+
+
+
+
+
+
+]

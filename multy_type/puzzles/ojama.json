@@ -1,0 +1,21 @@
+{
+  "name": "[GX_Spirit_Caller]B03_Oh_Jama",
+  "opp_lp_init": 4000,
+  "hand": [
+    {"op": "TRIO", "kind": "TRIO"},
+    {"op": "ZERO", "kind": "ZERO"},
+    {"op": "PILL", "kind": "PILL"},
+    {"op": "ATK", "kind": "ATK"}
+  ],
+  "damage_rules": {
+  "atk_base": 2000,
+  "pill_bonus": 0,
+  "trio_multiplier": 2.0
+  },
+  "damage_rules": { "atk_base": 2000, "trio_multiplier": 2.0, "pill_bonus": 0 },
+  "constraints": {
+    "required_order": ["ZERO", "PILL", "TRIO", "ATK"],
+    "must_break_before_first_atk": true,
+    "min_actions_before_stop": 4
+  }
+}

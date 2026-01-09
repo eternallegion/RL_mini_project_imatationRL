@@ -1,0 +1,10 @@
+{
+  "puzzle": "chain_resolve_then_kill",
+  "seed": 2025,
+  "reward": 2.6380000000000003,
+  "actions": [
+    2,
+    0,
+    1
+  ]
+}
